@@ -22,12 +22,11 @@ class Response
 				number = data[startindex+5..startindex+6].pack("c*").unpack("n").first
 				parameters =data[startindex+8]
 				return Response.new  central, function, number, parameters
-			else
-				return nil
 			end
 		rescue Exception => ex
 			puts ex
 			nil
 		end
+		return nil
 	end
 end

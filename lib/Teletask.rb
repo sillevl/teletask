@@ -25,9 +25,9 @@ class Teletask
 	end
 
 	def connect
-		puts "connecting..."
+		puts "Connecting to Teletask on #{@host} at port #{@port}..."
 		@socket = TCPSocket.open @host, @port
-
+		puts "Connected"
 		@t = Thread.new{ 
 			while (data = @socket.recv(1024))
 				response = Response.parse data
