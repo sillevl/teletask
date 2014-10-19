@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'teletask'
-  s.version     = '0.0.2'
-  s.date        = '2014-10-06'
+  s.version     = '0.1.1'
+  s.date        = '2014-10-19'
   s.summary     = "Teletask DoIP"
   s.description = "Teletask gem enables the communication with a Teletask Domitics central using the DoIP protocol"
   s.authors     = ["Sille Van Landschoot"]

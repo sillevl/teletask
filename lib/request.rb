@@ -6,8 +6,8 @@ module TeletaskApi
 			@parameters = Array.new
 
 			case command
-			when Teletask::Command::KEEPALIVE
-			when Teletask::Command::LOG
+			when Command::KEEPALIVE
+			when Command::LOG
 				@parameters = Array.new
 				@parameters[0] = function
 				@parameters[1] = number

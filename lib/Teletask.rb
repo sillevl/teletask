@@ -6,10 +6,8 @@ require_relative './constants'
 require_relative './request'
 require_relative './response'
 
-include TeletaskApi
 
 module TeletaskApi
-
 	class Teletask
 		include Observable
 
@@ -88,5 +86,3 @@ module TeletaskApi
 	end
 
 end
-
-Teletask = TeletaskApi::Teletask
