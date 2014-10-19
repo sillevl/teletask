@@ -1,5 +1,11 @@
-class Teletask
+module TeletaskApi
+	module 	ConstantName
+		def name( val )
+    		constants.find{ |name| const_get(name)==val }
+  		end
+  	end
 	module Command
+		extend ConstantName
 		SET = 7
 		GET = 6
 		GROUPSET = 9
@@ -10,6 +16,7 @@ class Teletask
 	end
 
 	module Function
+		extend ConstantName
 		RELAY = 1
 		DIMMER = 2
 		MOTOR = 6
@@ -26,6 +33,7 @@ class Teletask
 	end
 
 	module Setting
+		extend ConstantName
 		ON = 255
 		TOGGLE = 103
 		OFF = 0
