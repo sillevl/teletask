@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Teletask gem enables the communication with a Teletask Domitics central using the DoIP protocol"
   s.authors     = ["Sille Van Landschoot"]
   s.email       = 'info@sillevl.be'
-  s.files       = ["lib/teletask.rb", "lib/constants.rb", "lib/request.rb", "lib/response.rb"]
+  s.files       = ["lib/teletask.rb", "lib/constants.rb", "lib/request.rb", "lib/response.rb","lib/converter.rb"]
   s.homepage    =
     'http://rubygems.org/gems/teletask'
   s.license       = 'MIT'
