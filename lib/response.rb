@@ -13,7 +13,7 @@ module TeletaskApi
 		def self.parse data
 			begin
 				data = data.unpack("C*")
-				#unless data.first == 10
+				unless data.first == 10
 					startindex = data.index(2) 
 					raise "Start byte not found in Response: #{data.inspect}" unless startindex
 					length = data[startindex+1]
@@ -31,7 +31,7 @@ module TeletaskApi
 						parameters =data[startindex+8]
 					end
 					return Response.new  central, function, number, parameters
-				#end
+				end
 			rescue Exception => ex
 				puts ex
 				nil
