@@ -19,7 +19,7 @@ module TeletaskApi
 		def initialize(host, port = 55957)
 			@host = host
 			@port = port
-			#add_observer(self)
+			add_observer(self)
 		end
 
 		def finalize
@@ -77,9 +77,7 @@ module TeletaskApi
 		def message
 			raise NotImplementedError.new
 		end
-	end
 
-	class TeleTaskEvent
 		def update object, response
 			puts "Update: #{response.to_hash.inspect}"
 		end
