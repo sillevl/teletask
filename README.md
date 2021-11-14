@@ -23,8 +23,13 @@ example
 ```
 require 'teletask'
 
-teletask = Teletask.new("192.168.1.5")
+teletask = TeletaskApi.new("192.168.1.5")
 teletask.connect()
 
-teletask.get Teletask::Function::RELAY, 21
+#switch on relay #21
+teletask.set TeletaskApi::Function::RELAY, 21, 100
+# switch off relay #21
+teletask.set TeletaskApi::Function::RELAY, 21, 0
 ```
+#get temp of Sensor #1
+teletask.get TeletaskApi::Function::SENSOR, 01
